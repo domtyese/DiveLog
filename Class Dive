@@ -1,0 +1,42 @@
+public class Dive {
+    String name;
+    String date;
+    int depth;
+
+    public Dive(String name, String date, int depth){
+        this.name = name;
+        this.date = date;
+        this.depth = depth;
+    }
+
+    public String getName(){
+        return name;
+    }
+
+    public String getDate(){
+        return date;
+    }
+
+    public int getDepth(){
+        return depth;
+    }
+
+    @Override
+    public String toString(){
+        return "[" + name + ", " + date + ", " + depth + "ft]";
+    }
+
+
+    public int findDepthIncrements(){
+        int divider = 10;
+        return depth/ divider;
+    }
+
+    public void printChartLine(){
+        int num = 0;
+        num = findDepthIncrements();
+        for(int i = 0; i < num; i++){
+            System.out.print("*");
+        }
+    }
+}

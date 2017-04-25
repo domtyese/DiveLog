@@ -1,0 +1,50 @@
+public Class DiveLog {
+
+    ArrayList<Dive> diveList;
+
+    public DiveLog(String fileName){
+        diveList = new ArrayList<>();
+        Scanner scan = new Scanner(new FileReader("fileName.txt"));
+        while(scan.hasNext()){
+            String name = fileName.next();
+            String date = fileName.next();
+            int depth = fileName.nextInt();
+            diveList.add(new Dive(name, date, depth));
+        }
+    }
+
+    public DiveLog(){
+        diveList = new ArrayList<>();
+    }
+
+    public double findMaxDepth(String date) {
+        int maxDepth = integer.MIN_VALUE;
+        for(int i = 0; i < diveList.size(); i++){
+            if(diveList.get(i).getDate = date){
+                if(diveList.get(i).getDepth > maxDepth){
+                    maxDepth = diveList.get(i).getDepth;
+                }
+
+            }
+        }
+        return maxDepth;
+    }
+
+    public void addDive(Dive dive){
+        diveList.add(dive);
+    }
+
+    public void printChartHeader(String name){
+        System.out.println("Dives of " + name);
+    }
+
+    public void printChart(String name){
+        printChartHeader(name);
+        for(int i = 0; i < diveList.size(); i++){
+            if(diveList.get(i).getName.equals(name)){
+                System.out.println(dive.List.get(i).getDate);
+                dive.printChartLine();
+            }
+        }
+    }
+}

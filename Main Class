@@ -1,0 +1,13 @@
+public static void main(String[] args) {
+    //instantiate a diveLog
+    DiveLog newDive = new DiveLog("log.txt");
+
+    //add another diveLog
+    newDive.addDive(new Dive("John", "04/05/17", 110));
+
+    //print maxDepth
+    System.out.println(newDive.findMaxDepth("04/05/17"));
+
+    //print John's Chart
+    newDive.printChart("John");
+}
